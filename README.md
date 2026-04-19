@@ -1,4 +1,4 @@
-v0.1 (Stable Build)
+v0.1 ( Feature‑complete prototype)
 
 
 Project Overview
