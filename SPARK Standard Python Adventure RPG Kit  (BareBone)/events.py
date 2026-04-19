@@ -29,7 +29,7 @@ def check_level_up(Player):
     if Player.exp>15*Player.level:
         Player.level+=1
         Player.exp=0
-        print(f"You have gained a level. You are now level {Player.level}")
+        print(f"You have gain a level. You are now level {Player.level}")
         print ("What would you like to increase Power(P) or Health(H) ?")
 
         while True:
@@ -40,7 +40,7 @@ def check_level_up(Player):
                 Player.full_power+=power_increase
                 Player.power=Player.full_power
                 Player.health=Player.full_health
-                print(f"You power has increased by {power_increase}")
+                print(f"You power has increase by {power_increase}")
                 print (f"Your power is now {Player.power}.")
                 break
             
@@ -48,7 +48,7 @@ def check_level_up(Player):
                 health_increase=random.randint (20,30)
                 Player.full_health+=health_increase
                 Player.health=Player.full_health
-                print(f"You power has increased by {health_increase}")
+                print(f"You power has increase by {health_increase}")
                 print (f"Your health is now {Player.health}.")
                 break
 
