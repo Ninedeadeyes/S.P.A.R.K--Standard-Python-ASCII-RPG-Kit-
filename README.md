@@ -1,5 +1,4 @@
-v0.1 ( Feature‑complete prototype)
-
+V 1.0 
 
 Project Overview
 
