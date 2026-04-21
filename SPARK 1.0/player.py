@@ -1,21 +1,42 @@
+from __future__ import annotations
+from typing import List
 import weapon
 import armour
 
-class Player(object):
-    def __init__ (self,level,exp,health,power,gold,x,y):
-        self.alive=True
-        self.inventory=["Bone Flute"]
-        self.armour=armour.Rags()
-        self.weapon=weapon.Dagger()
-        self.level=level
-        self.exp=exp
-        self.health=health
-        self.full_health=100
-        self.power=power
-        self.gold=gold
-        self.full_power=12
-        self.x=x
-        self.y=y
-        self.spoon_quest=False 
-        self.got_spoon_for_quest=False
 
+class Player:
+    """Player entity storing stats, equipment, position, inventory and quest flags."""
+
+    def __init__(
+        self,
+        level: int,
+        exp: int,
+        health: int,
+        power: int,
+        gold: int,
+        x: int,
+        y: int
+    ) -> None:
+        self.alive: bool = True
+        self.inventory: List[str] = ["Bone Flute"]
+
+        # Equipment
+        self.armour: armour.Armour = armour.Rags()
+        self.weapon: weapon.Weapon = weapon.Dagger()
+
+        # Stats
+        self.level: int = level
+        self.exp: int = exp
+        self.health: int = health
+        self.full_health: int = 100
+        self.power: int = power
+        self.full_power: int = 12
+        self.gold: int = gold
+
+        # Position
+        self.x: int = x
+        self.y: int = y
+
+        # Quests
+        self.spoon_quest: bool = False
+        self.got_spoon_for_quest: bool = False

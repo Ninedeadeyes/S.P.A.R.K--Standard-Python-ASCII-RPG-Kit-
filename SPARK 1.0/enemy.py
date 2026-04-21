@@ -1,22 +1,33 @@
+from __future__ import annotations
+from typing import Any
 
-class Enemy():    
-    def __init__(self,name,power,health,exp,gold):
-        self.name=name
-        self.power=power
-        self.health=health
-        self.exp=exp
-        self.gold=gold
 
-#Random Event enemies 
+class Enemy:
+    """Base enemy class storing stats and rewards."""
 
-class Ratling  (Enemy):
-    def __init__(self,name="Ratling",power=4,health=30,exp=5,gold=25):
-        Enemy.__init__(self,name,power,health,exp,gold)
+    def __init__(self, name: str, power: int, health: int, exp: int, gold: int) -> None:
+        self.name: str = name
+        self.power: int = power
+        self.health: int = health
+        self.exp: int = exp
+        self.gold: int = gold
 
-class BogImp  (Enemy):
-    def __init__(self,name="Bog Imp",power=5,health=40,exp=7,gold=30):
-        Enemy.__init__(self,name,power,health,exp,gold)
 
-class Hobgoblin (Enemy):
-    def __init__(self,name="HobGoblin",power=6,health=50,exp=10,gold=35):
-        Enemy.__init__(self,name,power,health,exp,gold)
+# Random Event enemies 
+
+class Ratling(Enemy):
+    """Weak rat‑creature enemy."""
+    def __init__(self, name: str = "Ratling", power: int = 4, health: int = 30, exp: int = 5, gold: int = 25) -> None:
+        super().__init__(name, power, health, exp, gold)
+
+
+class BogImp(Enemy):
+    """Small swamp imp enemy."""
+    def __init__(self, name: str = "Bog Imp", power: int = 5, health: int = 40, exp: int = 7, gold: int = 30) -> None:
+        super().__init__(name, power, health, exp, gold)
+
+
+class Hobgoblin(Enemy):
+    """Stronger goblinoid enemy."""
+    def __init__(self, name: str = "HobGoblin", power: int = 6, health: int = 50, exp: int = 10, gold: int = 35) -> None:
+        super().__init__(name, power, health, exp, gold)

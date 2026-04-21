@@ -1,20 +1,25 @@
-class Weapon():    
-    def __init__(self,name,damage):
-        self.name=name
-        self.damage=damage
+from __future__ import annotations
+from typing import Any
 
-    def __str__(self):
-        return self.name     # This is needed so it reads the 'print' name not the memory eg : <weapon.WarHammer object at 0x00000235FA8FEBD0>
-  
-class Dagger  (Weapon):
-    def __init__(self,name="Dagger",damage=2):
-        Weapon.__init__(self,name,damage)
+class Weapon:
+    """Base weapon class storing name and damage."""
 
-class Sword (Weapon):
-    def __init__(self,name="Sword",damage=4):
-        Weapon.__init__(self,name,damage)
+    def __init__(self, name: str, damage: int) -> None:
+        self.name: str = name
+        self.damage: int = damage
 
-    def __str__(self):
-            return self.name
+    def __str__(self) -> str:
+        return self.name     # Needed so print() shows the weapon name instead of memory address
 
- 
+class Dagger(Weapon):
+    """Basic starter dagger."""
+    def __init__(self, name: str = "Dagger", damage: int = 2) -> None:
+        super().__init__(name, damage)
+
+class Sword(Weapon):
+    """Stronger melee weapon."""
+    def __init__(self, name: str = "Sword", damage: int = 4) -> None:
+        super().__init__(name, damage)
+
+    def __str__(self) -> str:
+        return self.name

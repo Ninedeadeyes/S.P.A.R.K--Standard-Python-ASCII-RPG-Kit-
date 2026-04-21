@@ -1,18 +1,22 @@
-
-import os 
+from __future__ import annotations
+from typing import Any
+import os
 import time
 
-def clear():
+
+def clear() -> None:
+    """Clear the terminal screen using the appropriate OS command."""
     os.system('cls' if os.name == 'nt' else 'clear')
 
-def intro_animation():
-    clear()
-    loop=0
-    while loop<3:
-        loop+=1
-        
 
-                     
+def intro_animation() -> None:
+    """Play the intro loading animation."""
+    clear()
+    loop = 0
+
+    while loop < 3:
+        loop += 1
+
         print("""      
                                                                  
                               xx  x                               xx
@@ -26,10 +30,8 @@ def intro_animation():
                       ddddddddddddddddddddddddddddddddddddddddddddddddddddddd                                   
                       loading . 
                    """)
-
         time.sleep(.3)
         clear()
-
 
         print("""   
               
@@ -44,12 +46,9 @@ def intro_animation():
                       ddddddddddddddddddddddddddddddddddddddddddddddddddddddd                                   
                       loading ..
                    """)
-
-             
-                                                                                                    
         time.sleep(.3)
-        clear()                                                                                            
-                                                                                              
+        clear()
+
         print("""      
               
                               xx  x                               xx
@@ -63,13 +62,9 @@ def intro_animation():
                       ddddddddddddddddddddddddddddddddddddddddddddddddddddddd                                  
                       loading ... 
                    """)
-
-         
         time.sleep(.3)
-        clear()                                                                                          
+        clear()
 
-
-                                                                                      
         print("""     
               
                               xx  x                               xx
@@ -82,13 +77,10 @@ def intro_animation():
                            x      x                          xxxxxxxxx
                       ddddddddddddddddddddddddddddddddddddddddddddddddddddddd                                   
                       loading . 
-                   """)            
-                                                                                                    
-
-
+                   """)
         time.sleep(.3)
-        clear()                                                                                            
-                                                                                              
+        clear()
+
         print("""     
               
                               xx  x                               xx
@@ -101,12 +93,10 @@ def intro_animation():
                            x      x                          xxxxxxxxx
                       ddddddddddddddddddddddddddddddddddddddddddddddddddddddd                                    
                       loading ..
-                   """)    
-        
-
+                   """)
         time.sleep(.3)
-        clear()                                                                                           
-                                                                                              
+        clear()
+
         print("""          
               
                           x   xx   x                              xx
@@ -119,19 +109,19 @@ def intro_animation():
                            x      x                          xxxxxxxxx
                       ddddddddddddddddddddddddddddddddddddddddddddddddddddddd                                                               
                       loading ...
-                   """)    
-
+                   """)
         time.sleep(.3)
-        clear()    
+        clear()
 
 
-def win_animation():
-    
+def win_animation() -> None:
+    """Play the win animation shown at the end of the game."""
     clear()
-    loop=0
-    while loop<4:
-        loop+=1
-                                                                                                                                                                                    
+    loop = 0
+
+    while loop < 4:
+        loop += 1
+
         print("""
               xxxxxx You Win !! (Game Over) xxxxxx   
               
@@ -145,11 +135,10 @@ def win_animation():
                            x      x                         
                       ddddddddddddddddddd                                                              
                      
-                   """)    
-        
+                   """)
         time.sleep(.3)
-        clear()    
-                                                                  
+        clear()
+
         print("""
               xxxxxx You Win !! (Game Over) xxxxxx         
               
@@ -163,10 +152,9 @@ def win_animation():
                            x      x                         
                       ddddddddddddddddddd                                                              
                      
-                   """)    
-        
+                   """)
         time.sleep(.3)
-        clear() 
+        clear()
 
         print("""
               xxxxxx You Win !! (Game Over) xxxxxx      
@@ -181,11 +169,9 @@ def win_animation():
                            x      x                         
                       ddddddddddddddddddd                                                              
                      
-                   """)    
-        
+                   """)
         time.sleep(.3)
-        clear() 
-
+        clear()
 
         print("""
               xxxxxx You Win !! (Game Over) xxxxxx   
@@ -200,7 +186,6 @@ def win_animation():
                         x         x                         
                       ddddddddddddddddddd                                                              
                      
-                   """)    
-        
+                   """)
         time.sleep(.3)
-        clear() 
+        clear()
