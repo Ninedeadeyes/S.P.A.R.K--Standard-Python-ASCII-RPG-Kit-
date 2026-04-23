@@ -10,5 +10,6 @@ where you can apply what you have learnt into your own mini adventures
 I have hard coded a simple fetch quest 'Spoon Quest' into the engine as an example.  When you create your own 
 games you should remove all elements of the example before you start. 
 
+Introduction/Guide Video
 
-( Will be releasing Introduction/Guide Video Soon ) 
+https://www.youtube.com/watch?v=F9R2cvgHVVU
