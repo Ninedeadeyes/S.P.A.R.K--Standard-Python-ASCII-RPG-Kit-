@@ -6,25 +6,13 @@ S.P.A.R.K is a light weight 2d Retro Ascii RPG Game Engine. It is build on the s
 
 The purpose of the engine is educational. I consider it an extension of my 15 mini python games tutorial series, it acts like a playground where you can apply what you have learnt into your own mini adventures
 
-I have hard coded a simple fetch quest 'Spoon Quest' into the engine as an example. When you create your own games you should remove all elements of the example before you start.
-
-
-S.P.A.R.K.
-Standard Python ASCII Roguelike Kit
-A lightweight, modular Python ASCII RPG engine focused on clarity, readability, and classic turn‑based gameplay.
-
-<details>
-<summary><strong>🔥 Overview</strong></summary>
-
 S.P.A.R.K. provides the core systems needed to build a traditional ASCII RPG, including:
 
 Player and enemy logic, Turn‑based combat, Map navigation, ASCII animations, Title screen and UI, Basic sound support, Weapons, armour, stats, leveling system, inventory system and events ( To create quests and storyline ) 
 
-Everything is contained in a simple, flat Python file structure — ideal for beginners and hobby developers.
+I have hard coded a simple fetch quest 'Spoon Quest' into the engine as an example. When you create your own games you should remove all elements of the example before you start.
 
-</details>
 
-<details>
 <summary><strong>🚀 Getting Started</strong></summary>
 
 Requirements
@@ -101,12 +89,17 @@ Plays .wav files on Windows.
 
 You can easily extend S.P.A.R.K. by adding:
 
--New weapons (weapon.py)
--New armour (armour.py)
--New enemy types (enemy.py)
--New events (events.py)
--New maps (maps.py)
--New animations (animations.py)
+*New weapons (weapon.py)
+
+*New armour (armour.py)
+
+*New enemy types (enemy.py)
+
+*New events (events.py)
+
+*New maps (maps.py)
+
+*New animations (animations.py)
 
 The codebase is intentionally simple so you can modify it freely.
 
