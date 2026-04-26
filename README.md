@@ -168,20 +168,6 @@ MIT License — free to use, modify, and distribute.
 </details>
 
 <details>
-<summary><strong>🤝 Contributing</strong></summary>
-
-Pull requests are welcome.
-Please keep contributions:
-
-Simple
-
-Readable
-
-Beginner‑friendly
-
-</details>
-
-<details>
 <summary><strong>🌟 Final Notes</strong></summary>
 
 S.P.A.R.K. is designed to be:
