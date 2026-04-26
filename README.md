@@ -77,28 +77,28 @@ Windows recommended (for sound playback)
 
 <strong>Game Loop (game.py) </strong>
 Controls the main flow of the game:
-Title screen
-Player input
-Movement
-Combat
-Events
+Title screen,
+Player input,
+Movement,
+Combat,
+Events,
 Rendering
 
 <strong>Combat System (battle.py)</strong>
 Handles:
-Attack rolls
-Damage calculation
-Weapon effects
+Attack rolls,
+Damage calculation,
+Weapon effects,
 Armour mitigation
 
 <strong>Player & Enemies</strong>
-player.py defines the player character
+player.py defines the player character and 
 enemy.py defines enemy types and behaviour
 
 <strong>Maps (maps.py)</strong>
 Manages:
-Tile layout
-Movement rules
+Tile layout,
+Movement rules,
 Collision detection
 
 <strong>Animations (animations.py)</strong>
