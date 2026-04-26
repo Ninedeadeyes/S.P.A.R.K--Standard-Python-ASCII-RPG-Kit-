@@ -89,17 +89,17 @@ Plays .wav files on Windows.
 
 You can easily extend S.P.A.R.K. by adding:
 
-*New weapons (weapon.py)
+* New weapons (weapon.py)
 
-*New armour (armour.py)
+* New armour (armour.py)
 
-*New enemy types (enemy.py)
+* New enemy types (enemy.py)
 
-*New events (events.py)
+* New events (events.py)
 
-*New maps (maps.py)
+* New maps (maps.py)
 
-*New animations (animations.py)
+* New animations (animations.py)
 
 The codebase is intentionally simple so you can modify it freely.
 
