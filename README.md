@@ -12,7 +12,7 @@ Player and enemy logic, Turn‑based combat, Map navigation, ASCII animations, T
 
 I have hard coded a simple fetch quest 'Spoon Quest' into the engine as an example. When you create your own games you should remove all elements of the example before you start.
 
-
+<details>
 <summary><strong>🚀 Getting Started</strong></summary>
 
 Requirements
