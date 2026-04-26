@@ -48,7 +48,9 @@ Windows recommended (for sound playback)
 <details>
 <summary><strong>🗂️ Project Structure</strong></summary>
 
-text
+<br>
+
+```text
 │   animations.py
 │   armour.py
 │   battle.py
@@ -65,7 +67,10 @@ text
 │
 └───music
         background.wav
+```
+
 </details>
+
 
 <details>
 <summary><strong>🧠 How the Engine Works</strong></summary>
