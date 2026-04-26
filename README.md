@@ -1,6 +1,6 @@
 V 1.0
 
-Project Overview
+<strong> Project Overview </strong>
 
 S.P.A.R.K is a light weight 2d Retro Ascii RPG Game Engine. It is build on the standard library hence no PIP install is required.
 
@@ -11,6 +11,7 @@ S.P.A.R.K. provides the core systems needed to build a traditional ASCII RPG, in
 Player and enemy logic, Turn‑based combat, Map navigation, ASCII animations, Title screen and UI, Basic sound support, Weapons, armour, stats, leveling system, inventory system and events ( To create quests and storyline ) 
 
 I have hard coded a simple fetch quest 'Spoon Quest' into the engine as an example. When you create your own games you should remove all elements of the example before you start.
+I would highly encourage you to build on it, break it, extend it — make it your own.
 
 <details>
 <summary><strong>🚀 Getting Started</strong></summary>
