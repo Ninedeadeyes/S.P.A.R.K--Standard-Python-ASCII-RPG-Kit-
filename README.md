@@ -75,50 +75,36 @@ Windows recommended (for sound playback)
 <details>
 <summary><strong>🧠 How the Engine Works</strong></summary>
 
-Game Loop (game.py)
+<strong>Game Loop (game.py) </strong>
 Controls the main flow of the game:
-
 Title screen
-
 Player input
-
 Movement
-
 Combat
-
 Events
-
 Rendering
 
-Combat System (battle.py)
+<strong>Combat System (battle.py)</strong>
 Handles:
-
 Attack rolls
-
 Damage calculation
-
 Weapon effects
-
 Armour mitigation
 
-Player & Enemies
+<strong>Player & Enemies</strong>
 player.py defines the player character
-
 enemy.py defines enemy types and behaviour
 
-Maps (maps.py)
+<strong>Maps (maps.py)</strong>
 Manages:
-
 Tile layout
-
 Movement rules
-
 Collision detection
 
-Animations (animations.py)
+<strong>Animations (animations.py)</strong>
 Provides ASCII transitions and visual effects.
 
-Sound (sound.py)
+<strong>Sound (sound.py)</strong>
 Plays .wav files on Windows.
 
 </details>
