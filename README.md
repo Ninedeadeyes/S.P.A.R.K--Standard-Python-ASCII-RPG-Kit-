@@ -107,22 +107,6 @@ The codebase is intentionally simple so you can modify it freely.
 </details>
 
 <details>
-<summary><strong>🎮 Example: Adding a New Enemy</strong></summary>
-
-python
-from enemy import Enemy
-
-orc = Enemy(
-    name="Orc Warrior",
-    health=30,
-    attack=8,
-    defence=3
-)
-Add it to your encounter logic and it will appear in battles.
-
-</details>
-
-<details>
 <summary><strong>📄 License</strong></summary>
 
 MIT License — free to use, modify, and distribute.
