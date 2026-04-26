@@ -43,21 +43,6 @@ Requirements
 Python 3.10+
 
 Windows recommended (for sound playback)
-
-Running the Game
-Clone the repository:
-
-Code
-git clone https://github.com/Ninedeadeyes/S.P.A.R.K--Standard-Python-ASCII-RPG-Kit-
-cd S.P.A.R.K--Standard-Python-ASCII-RPG-Kit-
-Run the game:
-
-Code
-python game.py
-Or launch the packaged executable:
-
-Code
-game.exe
 </details>
 
 <details>
