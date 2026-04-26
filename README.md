@@ -18,19 +18,7 @@ A lightweight, modular Python ASCII RPG engine focused on clarity, readability, 
 
 S.P.A.R.K. provides the core systems needed to build a traditional ASCII RPG, including:
 
-Player and enemy logic
-
-Turn‑based combat
-
-Map navigation
-
-ASCII animations
-
-Title screen and UI
-
-Basic sound support
-
-Weapons, armour, stats, and events
+Player and enemy logic, Turn‑based combat, Map navigation, ASCII animations, Title screen and UI, Basic sound support, Weapons, armour, stats, leveling system, inventory system and events ( To create quests and storyline ) 
 
 Everything is contained in a simple, flat Python file structure — ideal for beginners and hobby developers.
 
@@ -92,8 +80,7 @@ Weapon effects,
 Armour mitigation
 
 <strong>Player & Enemies</strong>
-player.py defines the player character and 
-enemy.py defines enemy types and behaviour
+<strong>player.py <strong> defines the player character and <strong>enemy.py <strong> defines enemy types and behaviour
 
 <strong>Maps (maps.py)</strong>
 Manages:
@@ -114,17 +101,12 @@ Plays .wav files on Windows.
 
 You can easily extend S.P.A.R.K. by adding:
 
-New weapons (weapon.py)
-
-New armour (armour.py)
-
-New enemy types (enemy.py)
-
-New events (events.py)
-
-New maps (maps.py)
-
-New animations (animations.py)
+-New weapons (weapon.py)
+-New armour (armour.py)
+-New enemy types (enemy.py)
+-New events (events.py)
+-New maps (maps.py)
+-New animations (animations.py)
 
 The codebase is intentionally simple so you can modify it freely.
 
