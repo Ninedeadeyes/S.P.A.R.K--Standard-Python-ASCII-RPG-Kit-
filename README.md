@@ -1,4 +1,4 @@
-V 1.0
+S.P.A.R.K Version  1.0
 
 <details>
 <summary><strong>🔥 Overview</strong></summary>
@@ -121,6 +121,4 @@ Demonstration / Guide Video below
 
 https://youtu.be/X8iuvvla46Q
 
-Example game that you can build with it 
 
-https://www.youtube.com/watch?v=AeF9d5FkGsE
