@@ -68,7 +68,7 @@ Weapon effects,
 Armour mitigation
 
 <strong>Player & Enemies</strong>
-<strong>player.py <strong> defines the player character and <strong>enemy.py <strong> defines enemy types and behaviour
+<strong>player.py </strong> defines the player character and <strong>enemy.py </strong> defines enemy types and behaviour
 
 <strong>Maps (maps.py)</strong>
 Manages:
@@ -127,24 +127,6 @@ Add it to your encounter logic and it will appear in battles.
 MIT License — free to use, modify, and distribute.
 
 </details>
-
-<details>
-<summary><strong>🌟 Final Notes</strong></summary>
-
-S.P.A.R.K. is designed to be:
-
-Lightweight
-
-Easy to understand
-
-Fun to modify
-
-A foundation for your own RPG ideas
-
-Build on it, break it, extend it — make it your own.
-
-</details>
-
 
 
 Demonstration / Guide Video below
