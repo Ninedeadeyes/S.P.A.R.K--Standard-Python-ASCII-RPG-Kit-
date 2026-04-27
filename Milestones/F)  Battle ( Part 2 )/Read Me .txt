@@ -1,0 +1,1 @@
+Implemented the battle function into the 'random event' function and tested to make sure its all working 
