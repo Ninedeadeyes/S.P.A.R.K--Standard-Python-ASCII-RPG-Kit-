@@ -1,0 +1,3 @@
+going_downstair bug fixed ( It was reading the data map instead of visual one hence causing issues when creating 'secret walls'  ) 
+
+technically it is multi-platform but unless its windows there will be no background music but will still work. 

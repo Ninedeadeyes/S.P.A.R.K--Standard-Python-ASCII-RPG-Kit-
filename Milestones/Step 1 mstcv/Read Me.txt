@@ -1,0 +1,2 @@
+
+# This was more or less taken from the basic game mstcv engine in my github ' Grimlore: Hand of the Herectic Hand' within the misc file..
