@@ -1,9 +1,0 @@
-There has been quite a lot of changes on this version 
-
-
-
-1) I remove the depreciated os.system
-
-2) rename the maps to something more understandable 
-
-3) Added Player class 

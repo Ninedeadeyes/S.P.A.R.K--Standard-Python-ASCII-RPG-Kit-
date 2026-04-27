@@ -1,6 +1,0 @@
-refactor the code so its much more clear when you open up the main folder (game). Hopefully with this update it is much improve 
-the clarity where python coders are able to read the code and write their own games. 
-
-Was not able to put the 'map 'files into a class as it created a bug that I couldn't figure out how to solve hence a quick solution  
-was to use global variables for the functions within map.. Might work on it later but have already spent a while trying to get my 
-map class to work properly. 
