@@ -1,11 +1,14 @@
 from __future__ import annotations
-from typing import Any
+from typing import TYPE_CHECKING
 import title_screen
 import events
 import maps
 import player
 import instructions
 import sound
+
+if TYPE_CHECKING:
+    from player import Player
 
 def main() -> None:
     """Main game loop: initializes the player, map, and handles all movement + events."""

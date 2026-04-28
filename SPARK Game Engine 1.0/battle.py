@@ -1,12 +1,11 @@
 from __future__ import annotations
-from typing import Any
 import msvcrt
 import random
 import maps
 import events
 
 
-def fight(Player: Any, Enemy: Any) -> None:
+def fight(Player: "Player", Enemy: "Enemy") -> None:
     """Run a full combat encounter between the player and an enemy."""
         
     print("\033c", end="")
@@ -18,6 +17,7 @@ def fight(Player: Any, Enemy: Any) -> None:
         print(f"{Enemy.name} hp:{Enemy.health} Power:{Enemy.power}")
         print("                                                                                                                                                   ")
         print(f"Player hp:{Player.health} Power:{Player.power}")
+        print("                                                                                                                                                   ") 
         print("What is your next action: Attack (A), Escape(E)")
 
         while True:

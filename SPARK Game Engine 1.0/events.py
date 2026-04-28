@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing import Any, List
+from typing import List, TYPE_CHECKING
 import random
 import msvcrt
 import battle
@@ -9,6 +9,8 @@ import enemy
 import sys
 import animations
 
+if TYPE_CHECKING:
+    from player import Player
 
 nothing_list: List[str] = [
     "You look for deadly traps but find none",
@@ -16,11 +18,6 @@ nothing_list: List[str] = [
     "Wait..You hear something..It must be your imagination",
     "You find nothing of interest here"
 ]
-
-
-# ---------------------------------------------------------------------------
-# Progress events
-# ---------------------------------------------------------------------------
 
 def win() -> None:
     """Trigger the win animation and end the game."""
@@ -30,22 +27,20 @@ def win() -> None:
     input("Press enter to exit")
     sys.exit()
 
-
-def death(Player: Any) -> None:
+def death(player: Player) -> None:
     """End the game if the player's health reaches zero."""
-    if Player.health <= 0:
+    if player.health <= 0:
         print("Wounds upon wounds, you fall to your death")
         print("GAME OVER")
         input("Press enter to exit")
         sys.exit()
 
-
-def check_level_up(Player: Any) -> None:
+def check_level_up(player: Player) -> None:
     """Check if the player levels up and apply stat increases."""
-    if Player.exp > 15 * Player.level:
-        Player.level += 1
-        Player.exp = 0
-        print(f"You have gained a level. You are now level {Player.level}")
+    if player.exp > 15 * player.level:
+        player.level += 1
+        player.exp = 0
+        print(f"You have gained a level. You are now level {player.level}")
         print("What would you like to increase Power(P) or Health(H)?")
 
         while True:
@@ -53,79 +48,61 @@ def check_level_up(Player: Any) -> None:
 
             if level_up_choice in {b'p', b'P'}:
                 power_increase = random.randint(2, 4)
-                Player.full_power += power_increase
-                Player.power = Player.full_power
-                Player.health = Player.full_health
+                player.full_power += power_increase
+                player.power = player.full_power
+                player.health = player.full_health
                 print(f"Your power has increased by {power_increase}")
-                print(f"Your power is now {Player.power}.")
+                print(f"Your power is now {player.power}.")
                 break
             
             if level_up_choice in {b'h', b'H'}:
                 health_increase = random.randint(20, 30)
-                Player.full_health += health_increase
-                Player.health = Player.full_health
+                player.full_health += health_increase
+                player.health = player.full_health
                 print(f"Your health has increased by {health_increase}")
-                print(f"Your health is now {Player.health}.")
+                print(f"Your health is now {player.health}.")
                 break
 
-        Player.exp = 0
+        player.exp = 0
 
-
-# ---------------------------------------------------------------------------
-# Random events
-# ---------------------------------------------------------------------------
-
-def random_event(Player: Any) -> None:
+def random_event(player: Player) -> None:
     """Trigger a random event: nothing, battle, or loot."""
     r = random.random()
     
     if r < 0.92:
         nothing_happened()
-
     elif r < 0.96:
-        random_battle(Player)
-                    
+        random_battle(player)                    
     else:
-        loot(Player)
+        loot(player)
 
-
-def random_battle(Player: Any) -> None:
+def random_battle(player: Player) -> None:
     """Start a random battle with one of three enemy types."""
     r = random.random()
 
     if r < 0.50:
-        battle.fight(Player, enemy.Ratling())
-
+        battle.fight(player, enemy.Ratling())
     elif r < 0.75:
-        battle.fight(Player, enemy.BogImp())
-
+        battle.fight(player, enemy.BogImp())
     else:
-        battle.fight(Player, enemy.Hobgoblin())
-
+        battle.fight(player, enemy.Hobgoblin())
 
 def nothing_happened() -> None:
     """Print a random 'nothing happened' message."""
     noEvent = random.choice(nothing_list)
     print(noEvent)
 
-
-def loot(Player: Any) -> None:
+def loot(player: Player) -> None:
     """Give the player a random amount of gold."""
     gold_pickup = random.randint(1, 12)
-
-    Player.gold += gold_pickup
+    player.gold += gold_pickup
 
     if gold_pickup == 1:
         print(f"You find a {gold_pickup} gold coin on the floor")
     else:
         print(f"You find {gold_pickup} gold coins on the floor")
 
-
-# ---------------------------------------------------------------------------
-# Quest events
-# ---------------------------------------------------------------------------
-
-def spoon_found(Player: Any) -> bool:
+def spoon_found(player: Player) -> bool:
     """Handle the event where the player finds a spoon."""
     print("You find a spoon on the floor. Do you pick it up (Y or N)?")
 
@@ -134,27 +111,26 @@ def spoon_found(Player: Any) -> bool:
 
         if decision in {b'y', b'Y'}:
             print("You pick up the spoon")
-            Player.got_spoon_for_quest = True
-            Player.inventory.append("Spoon")
+            player.got_spoon_for_quest = True
+            player.inventory.append("Spoon")
             return True
             
         if decision in {b'n', b'N'}:
             print("You decide to leave it")
             return False
 
-
-def goblin_spoon_quest(Player: Any) -> None:
+def goblin_spoon_quest(player: Player) -> None:
     """Handle the goblin's spoon quest dialogue and rewards."""
-    if not Player.got_spoon_for_quest and not Player.spoon_quest:
+    if not player.got_spoon_for_quest and not player.spoon_quest:
         print("Goblin: Have you seen my spoon?")
     
-    elif Player.got_spoon_for_quest and not Player.spoon_quest:
+    elif player.got_spoon_for_quest and not player.spoon_quest:
         print("Goblin: You have found my spoon, thank you!!")
         print("Goblin: For your troubles, here is a Sword and a Leather Tunic")
-        Player.inventory.remove("Spoon")
-        Player.inventory.append(weapon.Sword())
-        Player.inventory.append(armour.LeatherTunic())
-        Player.spoon_quest = True
+        player.inventory.remove("Spoon")
+        player.inventory.append(weapon.Sword())
+        player.inventory.append(armour.LeatherTunic())
+        player.spoon_quest = True
 
     else:
         print("Goblin: Spoon, spoon I love my spoon la la la laaaaaa")
