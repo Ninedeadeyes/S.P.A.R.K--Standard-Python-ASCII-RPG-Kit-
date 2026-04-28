@@ -1,11 +1,13 @@
 from __future__ import annotations
-from typing import List, Any
+from typing import List, TYPE_CHECKING
 import armour
 import weapon
 import msvcrt
 
+if TYPE_CHECKING:
+    from player import Player
 
-def order(bag: List[Any]) -> None:
+def order(bag: List) -> None:
     """Print numbered list of items in the player's bag."""
     for x in range(len(bag)): 
         print(x + 1, str(bag[x]))
@@ -17,7 +19,7 @@ def play_instruction() -> None:
     print(" Movement: WASD, Inventory : I ")  
 
 
-def commands(Player: Any) -> None:
+def commands(Player: Player) -> None:
     """Handle player input for movement, inventory, and equipment."""
     print("                                   ")
     print("                                    ")

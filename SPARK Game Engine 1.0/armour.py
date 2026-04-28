@@ -1,16 +1,14 @@
 from __future__ import annotations
-from typing import Any
-
 
 class Armour:
     """Base armour class storing name and protection value."""
 
     def __init__(self, name: str, protection: int) -> None:
-        self.name: str = name
-        self.protection: int = protection
+        self.name = name
+        self.protection = protection
 
     def __str__(self) -> str:
-        return self.name     # Needed so print() shows the armour name instead of memory address
+        return self.name
 
 
 class Rags(Armour):

@@ -11,10 +11,12 @@ class Weapon:
     def __str__(self) -> str:
         return self.name     # Needed so print() shows the weapon name instead of memory address
 
+
 class Dagger(Weapon):
     """Basic starter dagger."""
     def __init__(self, name: str = "Dagger", damage: int = 2) -> None:
         super().__init__(name, damage)
+
 
 class Sword(Weapon):
     """Stronger melee weapon."""
