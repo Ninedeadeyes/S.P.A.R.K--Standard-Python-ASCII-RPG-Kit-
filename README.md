@@ -1,7 +1,7 @@
 S.P.A.R.K Version  1.0
 
 <details>
-<summary><strong>🔥 Overview</strong></summary>
+<summary><strong> *  Overview</strong></summary>
 
 S.P.A.R.K is a light weight 2d Retro Ascii RPG Game Engine. It is build on the standard library hence no PIP install is required.
 
