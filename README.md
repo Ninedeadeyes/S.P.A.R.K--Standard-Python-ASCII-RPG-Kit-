@@ -1,7 +1,7 @@
 S.P.A.R.K Version  1.0
 
 <details>
-<summary><strong> *  Overview</strong></summary>
+<summary><strong>  Overview</strong></summary>
 
 S.P.A.R.K is a light weight 2d Retro Ascii RPG Game Engine. It is build on the standard library hence no PIP install is required.
 
@@ -17,7 +17,7 @@ I would highly encourage you to build on it, break it, extend it — make it you
 
 
 <details>
-<summary><strong>🚀 Getting Started</strong></summary>
+<summary><strong>  Getting Started</strong></summary>
 
 Requirements
 Python 3.10+
@@ -26,7 +26,7 @@ Windows recommended (for sound playback)
 </details>
 
 <details>
-<summary><strong>🗂️ Project Structure</strong></summary>
+<summary><strong>  Project Structure</strong></summary>
 
 <br>
 
@@ -53,7 +53,7 @@ Windows recommended (for sound playback)
 
 
 <details>
-<summary><strong>🧠 How the Engine Works</strong></summary>
+<summary><strong>  How the Engine Works</strong></summary>
 
 <strong>Game Loop (game.py) </strong>
 Controls the main flow of the game:
@@ -89,7 +89,7 @@ Plays .wav files on Windows.
 </details>
 
 <details>
-<summary><strong>🧩 Creating Your Own Content</strong></summary>
+<summary><strong>  Creating Your Own Content</strong></summary>
 
 You can easily extend S.P.A.R.K. by adding:
 
@@ -110,7 +110,7 @@ The codebase is intentionally simple so you can modify it freely.
 </details>
 
 <details>
-<summary><strong>📄 License</strong></summary>
+<summary><strong>  License</strong></summary>
 
 MIT License — free to use, modify, and distribute.
 
