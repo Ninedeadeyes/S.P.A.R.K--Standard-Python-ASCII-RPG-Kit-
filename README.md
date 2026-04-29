@@ -22,7 +22,7 @@ I would highly encourage you to build on it, break it, extend it — make it you
 Requirements
 Python 3.10+
 
-Windows recommended (for sound playback)
+Windows recommended (for sound playback). I would suggest using pygame if you want sound playback for the other operating systems.
 </details>
 
 <details>
@@ -113,6 +113,21 @@ The codebase is intentionally simple so you can modify it freely.
 <summary><strong>  License</strong></summary>
 
 MIT License — free to use, modify, and distribute.
+
+</details>
+
+<details>
+<summary><strong>Misc</strong></summary>
+        
+Provided a milestones folder for those who are interested in how the Engine was built from the foundation. 
+
+Example of games that can built on this Engine:
+
+Both were built as stand alone games many years ago and I refactor their code to build S.P.A.R.K 
+
+https://github.com/Ninedeadeyes/Grimlore-Land-of-the-Heretic-Hand
+
+https://github.com/Ninedeadeyes/Dungeon-of-the-Black-Dragon
 
 </details>
 
