@@ -11,6 +11,8 @@ S.P.A.R.K. provides the core systems needed to build a traditional ASCII RPG, in
 
 Player and enemy logic, Turn‑based combat, Map navigation, ASCII animations, Title screen and UI, Basic sound support, Weapons, armour, stats, leveling system, inventory system and events ( To create quests and storyline ) 
 
+The types of RPG games you can make are akin to those created with the Bitsy game engine or the Fighting Fantasy gamebook series
+
 I have hard coded a simple fetch quest 'Spoon Quest' into the engine as an example. When you create your own games you should remove all elements of the example before you start.
 I would highly encourage you to build on it, break it, extend it — make it your own.
 </details>
