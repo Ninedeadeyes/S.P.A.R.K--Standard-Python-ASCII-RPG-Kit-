@@ -1,5 +1,8 @@
 from __future__ import annotations
-from typing import List, Dict
+from typing import List, Dict, TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from player import Player
 
 data_map_1: List[List[str]] = [
     [" "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "],
@@ -136,49 +139,49 @@ def display_map(maps: List[List[str]]) -> None:
         map_row = str(maps[x]).replace(',', '').replace("'", " ").replace(".", " ").replace("[", " ").replace("]", " ")
         print(map_row)
 
-def clear_screen(Player: "Player") -> str:
-    visual_map_choice[Player.y][Player.x] = "@"
-    position = data_map_choice[Player.y][Player.x]
+def clear_screen(player: Player) -> str:
+    visual_map_choice[player.y][player.x] = "@"
+    position = data_map_choice[player.y][player.x]
     print("\033[H\033[J", end="")
     display_map(visual_map_choice)
     return position
 
-def solid_interaction(Player: "Player", object: str) -> None:
-    visual_map_choice[Player.y][Player.x] = object
-    Player.x = previousX
-    Player.y = previousY
-    visual_map_choice[Player.y][Player.x] = "@"
+def solid_interaction(player: Player, object: str) -> None:
+    visual_map_choice[player.y][player.x] = object
+    player.x = previousX
+    player.y = previousY
+    visual_map_choice[player.y][player.x] = "@"
     print("\033[H\033[J", end="")
     display_map(visual_map_choice)
 
-def going_upstairs(Player: "Player") -> None:
+def going_upstairs(player: Player) -> None:
     global level, data_map_choice, visual_map_choice
-    visual_map_choice[Player.y][Player.x] = "<"
+    visual_map_choice[player.y][player.x] = "<"
     level = 0
     data_map_choice = data_maps_library[level]
     visual_map_choice = visual_maps_library[level]
-    Player.x = 9
-    Player.y = 4
-    clear_screen(Player)
+    player.x = 9
+    player.y = 4
+    clear_screen(player)
     print("You walk up the stairs")
 
-def going_downstairs(Player: "Player") -> None:
+def going_downstairs(player: Player) -> None:
     global level, data_map_choice, visual_map_choice
-    visual_map_choice[Player.y][Player.x] = ">"
+    visual_map_choice[player.y][player.x] = ">"
     level += 1
     data_map_choice = data_maps_library[level]
     visual_map_choice = visual_maps_library[level]
     if level in level_start_positions:
         coords = level_start_positions[level]
-        Player.x = coords["x"]
-        Player.y = coords["y"]
-        clear_screen(Player)
+        player.x = coords["x"]
+        player.y = coords["y"]
+        clear_screen(player)
         print("You walk down the stairs")
 
-def flush(Player: "Player") -> None:
-    visual_map_choice[Player.y][Player.x] = "."
+def flush(player: Player) -> None:
+    visual_map_choice[player.y][player.x] = "."
 
-def recall_step(Player: "Player") -> None:
+def recall_step(player: Player) -> None:
     global previousX, previousY
-    previousX = Player.x
-    previousY = Player.y
+    previousX = player.x
+    previousY = player.y

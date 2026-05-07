@@ -7,16 +7,8 @@ import armour
 class Player:
     """Player entity storing stats, equipment, position, inventory and quest flags."""
 
-    def __init__(
-        self,
-        level: int,
-        exp: int,
-        health: int,
-        power: int,
-        gold: int,
-        x: int,
-        y: int
-    ) -> None:
+    def __init__(self,level: int,exp: int,health: int,power: int,gold: int,x: int,y: int) -> None:
+        
         self.alive: bool = True
         self.inventory: List[str] = ["Bone Flute"]
 

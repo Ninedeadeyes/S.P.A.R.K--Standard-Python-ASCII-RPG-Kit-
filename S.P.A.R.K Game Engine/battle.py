@@ -3,9 +3,15 @@ import msvcrt
 import random
 import maps
 import events
+from typing import TYPE_CHECKING
 
+# This block allows the code to "see" the definitions for the type hints 
+# without causing the circular import crash at runtime.
+if TYPE_CHECKING:
+    from player import Player
+    from enemy import Enemy 
 
-def fight(Player: "Player", Enemy: "Enemy") -> None:
+def fight(player: Player, enemy: Enemy) -> None:
     """Run a full combat encounter between the player and an enemy."""
         
     print("\033c", end="")
@@ -14,10 +20,10 @@ def fight(Player: "Player", Enemy: "Enemy") -> None:
     
     while battle:
 
-        print(f"{Enemy.name} hp:{Enemy.health} Power:{Enemy.power}")
-        print("                                                                                                                                                   ")
-        print(f"Player hp:{Player.health} Power:{Player.power}")
-        print("                                                                                                                                                   ") 
+        print(f"{enemy.name} hp:{enemy.health} Power:{enemy.power}")
+        print(" " * 100) # Simplified long empty strings
+        print(f"Player hp:{player.health} Power:{player.power}")
+        print(" " * 100) 
         print("What is your next action: Attack (A), Escape(E)")
 
         while True:
@@ -31,24 +37,24 @@ def fight(Player: "Player", Enemy: "Enemy") -> None:
                 enemy_dice_roll = random.randint(1, 6)
                 player_dice_roll = random.randint(1, 6)
 
-                enemy_damage_total = max(0, Enemy.power + enemy_dice_roll - Player.armour.protection)
-                Player.health -= enemy_damage_total
+                enemy_damage_total = max(0, enemy.power + enemy_dice_roll - player.armour.protection)
+                player.health -= enemy_damage_total
 
-                player_damage_total = Player.power + player_dice_roll + Player.weapon.damage
-                Enemy.health -= player_damage_total
+                player_damage_total = player.power + player_dice_roll + player.weapon.damage
+                enemy.health -= player_damage_total
 
-                print(f"The {Enemy.name} attacks you for {enemy_damage_total} damage. Your health is {Player.health}")
-                print(f"You attack the {Enemy.name} and deal {player_damage_total} damage. The {Enemy.name} health is {Enemy.health}")                 
+                print(f"The {enemy.name} attacks you for {enemy_damage_total} damage. Your health is {player.health}")
+                print(f"You attack the {enemy.name} and deal {player_damage_total} damage. The {enemy.name} health is {enemy.health}")                 
 
-                if Player.health <= 0:
-                    events.death(Player)
+                if player.health <= 0:
+                    events.death(player)
 
-                if Enemy.health <= 0:
-                    print(f"You win the fight against the {Enemy.name}")
-                    Player.exp += Enemy.exp
-                    Player.gold += Enemy.gold
-                    print(f"You gain {Enemy.gold} gold ")
-                    events.check_level_up(Player)
+                if enemy.health <= 0:
+                    print(f"You win the fight against the {enemy.name}")
+                    player.exp += enemy.exp
+                    player.gold += enemy.gold
+                    print(f"You gain {enemy.gold} gold ")
+                    events.check_level_up(player)
                     input("Press enter to continue")
                     battle = False
                     break
@@ -73,15 +79,15 @@ def fight(Player: "Player", Enemy: "Enemy") -> None:
                 else:
                     print("You do not escape")
                     enemy_dice_roll = random.randint(1, 12)
-                    enemy_damage_total = max(0, Enemy.power + enemy_dice_roll)
-                    Player.health -= enemy_damage_total
+                    enemy_damage_total = max(0, enemy.power + enemy_dice_roll)
+                    player.health -= enemy_damage_total
 
-                    print(f"The {Enemy.name} attacks you for {enemy_damage_total} damage. Your health is {Player.health}")
+                    print(f"The {enemy.name} attacks you for {enemy_damage_total} damage. Your health is {player.health}")
                     input("Press any key to continue")
                     print("\033c", end="")
 
-                    if Player.health <= 0:
-                        events.death(Player)
+                    if player.health <= 0:
+                        events.death(player)
                      
                 break
         
