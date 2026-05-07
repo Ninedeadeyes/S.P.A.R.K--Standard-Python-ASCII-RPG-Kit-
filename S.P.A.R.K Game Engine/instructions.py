@@ -19,31 +19,31 @@ def play_instruction() -> None:
     print(" Movement: WASD, Inventory : I ")  
 
 
-def commands(Player: Player) -> None:
+def commands(player: Player) -> None:
     """Handle player input for movement, inventory, and equipment."""
     print("                                   ")
     print("                                    ")
-    print(f" Level:{Player.level} Health: {Player.health} Power: {Player.power} Gold: {Player.gold}")
-    print(f" Armour: {Player.armour.name} + {Player.armour.protection} Protection   Weapon: {Player.weapon.name} + {Player.weapon.damage} Damage")
+    print(f" Level:{player.level} Health: {player.health} Power: {player.power} Gold: {player.gold}")
+    print(f" Armour: {player.armour.name} + {player.armour.protection} Protection    Weapon: {player.weapon.name} + {player.weapon.damage} Damage")
 
     while True:        # ignores all non instruction keypress 
         instruction = msvcrt.getch()
 
         # Movement
         if instruction in {b'w', b'W'}:  # Up
-            Player.y -= 1
+            player.y -= 1
             break
                 
         if instruction in {b's', b'S'}:  # Down
-            Player.y += 1
+            player.y += 1
             break
         
         if instruction in {b'd', b'D'}:  # Right
-            Player.x += 1
+            player.x += 1
             break
                 
         if instruction in {b'a', b'A'}:  # Left
-            Player.x -= 1
+            player.x -= 1
             break
 
         # Inventory
@@ -55,10 +55,10 @@ def commands(Player: Player) -> None:
 
                 # Bag
                 if instruction in {b'b', b'B'}:
-                    if Player.inventory == [""]:
+                    if player.inventory == [""]:
                         print("Your bag is empty")
                     else:
-                        order(Player.inventory)
+                        order(player.inventory)
 
                     print("Press E to Exit")
 
@@ -71,7 +71,7 @@ def commands(Player: Player) -> None:
 
                         # Equip weapon
                         if instruction in {b'w', b'W'}:
-                            Weapons = [item for item in Player.inventory if isinstance(item, weapon.Weapon)]
+                            Weapons = [item for item in player.inventory if isinstance(item, weapon.Weapon)]
                                 
                             if not Weapons:
                                 print("You do not have any Weapon to equip")
@@ -86,10 +86,10 @@ def commands(Player: Player) -> None:
                             while not valid:
                                 choice = input("")
                                 try:
-                                    old_weapon = Player.weapon
-                                    Player.inventory.remove(Weapons[int(choice) - 1])
-                                    Player.weapon = Weapons[int(choice) - 1]
-                                    Player.inventory.append(old_weapon)
+                                    old_weapon = player.weapon
+                                    player.inventory.remove(Weapons[int(choice) - 1])
+                                    player.weapon = Weapons[int(choice) - 1]
+                                    player.inventory.append(old_weapon)
                                     print("You arm yourself with:", Weapons[int(choice) - 1])
                                     print("Press E for Exit")
                                     valid = True
@@ -102,7 +102,7 @@ def commands(Player: Player) -> None:
 
                         # Equip armour
                         if instruction in {b'a', b'A'}:
-                            Armours = [item for item in Player.inventory if isinstance(item, armour.Armour)]
+                            Armours = [item for item in player.inventory if isinstance(item, armour.Armour)]
                                 
                             if not Armours:
                                 print("You do not have any Armour to equip")
@@ -117,10 +117,10 @@ def commands(Player: Player) -> None:
                             while not valid:
                                 choice = input("")
                                 try:
-                                    old_armour = Player.armour
-                                    Player.inventory.remove(Armours[int(choice) - 1])
-                                    Player.armour = Armours[int(choice) - 1]
-                                    Player.inventory.append(old_armour)
+                                    old_armour = player.armour
+                                    player.inventory.remove(Armours[int(choice) - 1])
+                                    player.armour = Armours[int(choice) - 1]
+                                    player.inventory.append(old_armour)
                                     print("You equip yourself with:", Armours[int(choice) - 1])
                                     print("Press E for Exit")
                                     valid = True
