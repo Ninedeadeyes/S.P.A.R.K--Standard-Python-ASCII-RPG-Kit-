@@ -123,9 +123,13 @@ MIT License — free to use, modify, and distribute.
         
 Provided a milestones folder for those who are interested in how the Engine was built from the foundation. 
 
+
 Example of games that can built on this Engine:
 
 Both were built as stand alone games many years ago and I refactor their code to build S.P.A.R.K 
+
+The biggest difference is for S.P.A.R.K, I used msvcrt for instant key press whilst for the below games 
+you will need to 'press enter' after every command. 
 
 https://github.com/Ninedeadeyes/Grimlore-Land-of-the-Heretic-Hand
 
