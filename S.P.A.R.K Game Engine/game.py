@@ -10,9 +10,9 @@ def main() -> None:
     """Main game loop: initializes the player, map, and handles all movement + events."""
     
     # This is the player (level, exp, health, power, gold, x, y):
-    hero = player.Player(1, 0, 100, 12, 0, 9, 4)
+    hero = player.Player(1, 0, 100, 12, 0, 9, 4)        # initially x and y is starting position on 1st map   
 
-    game_loop = True   # initiate game loop
+    game_loop = True   # initiate game loop         
 
     sound.play_background_music("Music/background.wav")  # background music 
     title_screen.intro()  # Provide a description/setting/title screen of the game before it begins  
