@@ -123,7 +123,7 @@ MIT License — free to use, modify, and distribute.
         
 Provided a milestones folder for those who are interested in how the Engine was built from the foundation. 
 
-Aside from 'The Spoon Quest' example here are example of games that can built on this Engine:
+Aside from 'The Spoon Quest' example, here are example of games that can built on this Engine:
 
 Both were built as stand alone games many years ago and I refactor their code to build S.P.A.R.K 
 
