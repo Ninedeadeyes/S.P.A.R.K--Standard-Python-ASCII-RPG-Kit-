@@ -24,7 +24,7 @@ Python 3.10+
 
 Windows recommended (for sound playback). I would suggest using pygame if you want sound playback for the other operating systems.
 
-I have created an example game with a simple fetch quest titled 'S.P.A.R.K ( Spoon Quest Example )'. It provides a good case study on how you would 'code a quest' into the engine you can even use it as a basis for your own game but if you want to work on a blank slate use the  S.P.A.R.K Game Engine (Blank Canvas)
+I have created an example game with a simple fetch quest titled 'S.P.A.R.K ( Spoon Quest Example )'. It provides a good case study on how you would 'code a quest' into the engine. You can use it as a basis for your own game but if you want to work on a blank slate use the  S.P.A.R.K Game Engine (Blank Canvas)
 
 </details>
 
