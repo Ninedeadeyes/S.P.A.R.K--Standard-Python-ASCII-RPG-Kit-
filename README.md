@@ -13,8 +13,6 @@ Player and enemy logic, Turn‑based combat, Map navigation, ASCII animations, T
 
 The types of RPG games you can make are akin to those created with the Bitsy game engine or the Fighting Fantasy gamebook series
 
-I have hard coded a simple fetch quest 'Spoon Quest' into the engine as an example. When you create your own games you should remove all elements of the example before you start.
-I would highly encourage you to build on it, break it, extend it — make it your own.
 </details>
 
 
@@ -27,6 +25,8 @@ Python 3.10+
 Windows recommended (for sound playback). I would suggest using pygame if you want sound playback for the other operating systems.
 </details>
 
+In the main S.P.A.R.K Engine folder I have hard coded a simple fetch quest 'Spoon Quest' into the engine as an example game. If you want to work on a blank slate I would suggest using the 'Blank Canvas' version. 
+
 <details>
 <summary><strong>  Project Structure</strong></summary>
 
@@ -38,7 +38,6 @@ Windows recommended (for sound playback). I would suggest using pygame if you wa
 │   battle.py
 │   enemy.py
 │   events.py
-│   game.exe
 │   game.py
 │   instructions.py
 │   maps.py
