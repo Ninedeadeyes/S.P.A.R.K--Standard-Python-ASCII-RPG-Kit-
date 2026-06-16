@@ -23,9 +23,9 @@ Requirements
 Python 3.10+
 
 Windows recommended (for sound playback). I would suggest using pygame if you want sound playback for the other operating systems.
-</details>
 
 In the main S.P.A.R.K Engine folder I have hard coded a simple fetch quest 'Spoon Quest' into the engine as an example game. If you want to work on a blank slate I would suggest using the 'Blank Canvas' version. 
+</details>
 
 <details>
 <summary><strong>  Project Structure</strong></summary>
