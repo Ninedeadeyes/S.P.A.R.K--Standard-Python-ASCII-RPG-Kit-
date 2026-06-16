@@ -24,7 +24,8 @@ Python 3.10+
 
 Windows recommended (for sound playback). I would suggest using pygame if you want sound playback for the other operating systems.
 
-In the main S.P.A.R.K Engine folder I have hard coded a simple fetch quest 'Spoon Quest' into the engine as an example game. If you want to work on a blank slate I would suggest using the 'Blank Canvas' version. 
+I have created an example game with a simple fetch quest titled 'S.P.A.R.K ( Spoon Quest Example )'. It provides a good case study on how you would 'code a quest' into the engine you can even use it as a basis for your own game but if you want to work on a blank slate use the  S.P.A.R.K Game Engine (Blank Canvas)
+
 </details>
 
 <details>
@@ -122,8 +123,7 @@ MIT License — free to use, modify, and distribute.
         
 Provided a milestones folder for those who are interested in how the Engine was built from the foundation. 
 
-
-Example of games that can built on this Engine:
+Aside from 'The Spoon Quest' example here are example of games that can built on this Engine:
 
 Both were built as stand alone games many years ago and I refactor their code to build S.P.A.R.K 
 
