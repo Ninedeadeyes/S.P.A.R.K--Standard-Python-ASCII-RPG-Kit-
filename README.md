@@ -123,17 +123,6 @@ MIT License — free to use, modify, and distribute.
         
 Provided a milestones folder for those who are interested in how the Engine was built from the foundation. 
 
-Aside from 'The Spoon Quest' example, here are example of games that can built on this Engine:
-
-Both were built as stand alone games many years ago and I refactor their code to build S.P.A.R.K 
-
-The biggest difference is for S.P.A.R.K, I used msvcrt library for instant key press whilst for the below games 
-you will need to 'press enter' after every command. 
-
-https://github.com/Ninedeadeyes/Grimlore-Land-of-the-Heretic-Hand
-
-https://github.com/Ninedeadeyes/Dungeon-of-the-Black-Dragon
-
 </details>
 
 
@@ -141,4 +130,7 @@ Demonstration / Guide Video below
 
 https://youtu.be/X8iuvvla46Q
 
+Example Game below 
+
+https://github.com/Ninedeadeyes/Grimlore-2-These-Doomed-Men-
 
