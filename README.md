@@ -29,68 +29,6 @@ I have created an example game with a simple fetch quest titled 'S.P.A.R.K ( Spo
 </details>
 
 <details>
-<summary><strong>  Project Structure</strong></summary>
-
-<br>
-
-```text
-│   animations.py
-│   armour.py
-│   battle.py
-│   enemy.py
-│   events.py
-│   game.py
-│   instructions.py
-│   maps.py
-│   player.py
-│   sound.py
-│   title_screen.py
-│   weapon.py
-│
-└───music
-        background.wav
-```
-
-</details>
-
-
-<details>
-<summary><strong>  How the Engine Works</strong></summary>
-
-<strong>Game Loop (game.py) </strong>
-Controls the main flow of the game:
-Title screen,
-Player input,
-Movement,
-Combat,
-Events,
-Rendering
-
-<strong>Combat System (battle.py)</strong>
-Handles:
-Attack rolls,
-Damage calculation,
-Weapon effects,
-Armour mitigation
-
-<strong>Player & Enemies</strong>
-<strong>player.py </strong> defines the player character and <strong>enemy.py </strong> defines enemy types and behaviour
-
-<strong>Maps (maps.py)</strong>
-Manages:
-Tile layout,
-Movement rules,
-Collision detection
-
-<strong>Animations (animations.py)</strong>
-Provides ASCII transitions and visual effects.
-
-<strong>Sound (sound.py)</strong>
-Plays .wav files on Windows.
-
-</details>
-
-<details>
 <summary><strong>  Creating Your Own Content</strong></summary>
 
 You can easily extend S.P.A.R.K. by adding:
@@ -112,19 +50,13 @@ The codebase is intentionally simple so you can modify it freely.
 </details>
 
 <details>
-<summary><strong>  License</strong></summary>
-
-MIT License — free to use, modify, and distribute.
-
-</details>
-
-<details>
 <summary><strong>Misc</strong></summary>
         
 Provided a milestones folder for those who are interested in how the Engine was built from the foundation. 
 
-</details>
+MIT License — free to use, modify, and distribute.
 
+</details>
 
 Demonstration / Guide Video below
 
