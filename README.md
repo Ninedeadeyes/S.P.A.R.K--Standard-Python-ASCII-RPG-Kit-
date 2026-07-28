@@ -12,11 +12,11 @@ Player and enemy logic, Turn‑based combat, Map navigation, ASCII animations, T
 
 The types of RPG games you can make are akin to those created with the Bitsy game engine or the Fighting Fantasy gamebook series
 
-<strong>Demonstration / Guide Video below</strong>
+<strong>Demonstration / Guide Video</strong>
 
 https://youtu.be/X8iuvvla46Q
 
-<strong>Example Game below </strong>
+<strong>Example Game</strong>
 
 https://github.com/Ninedeadeyes/Grimlore-2-These-Doomed-Men-
 
