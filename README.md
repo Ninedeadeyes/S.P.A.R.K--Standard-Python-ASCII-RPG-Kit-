@@ -1,6 +1,6 @@
-S.P.A.R.K Version  1.0
+<strong>S.P.A.R.K Version  1.0</strong>
 
-Overview
+<strong>Overview</strong>
 
 S.P.A.R.K is a light weight 2d Retro Ascii RPG Game Engine. It is build on the standard library hence no PIP install is required.
 
@@ -12,11 +12,11 @@ Player and enemy logic, Turn‑based combat, Map navigation, ASCII animations, T
 
 The types of RPG games you can make are akin to those created with the Bitsy game engine or the Fighting Fantasy gamebook series
 
-Demonstration / Guide Video below
+<strong>Demonstration / Guide Video below</strong>
 
 https://youtu.be/X8iuvvla46Q
 
-Example Game below 
+<strong>Example Game below </strong>
 
 https://github.com/Ninedeadeyes/Grimlore-2-These-Doomed-Men-
 
