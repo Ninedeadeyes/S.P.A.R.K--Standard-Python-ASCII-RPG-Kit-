@@ -59,7 +59,7 @@ The codebase is intentionally simple so you can modify it freely.
         
 To clear up a few recurring questions and misconceptions regarding S.P.A.R.K and its development, here is some context upfront:
 
-1."This is just AI slop."
+ 1."This is just AI slop."
 
 This project has a clear 6-year paper trail of manual development. It began as an early 2D text adventure project (Dungeon of the Black Dragon), expanded into an open world RPG game (Grimlore: Land of the Heretic Hand), and was eventually refactored into a reusable engine framework (S.P.A.R.K). If you want to see the step-by-step progression from line one, check out the milestones folder inside the S.P.A.R.K repository.
 
